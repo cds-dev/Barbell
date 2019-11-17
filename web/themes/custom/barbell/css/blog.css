@@ -9,7 +9,6 @@
   margin-bottom: 120px;
 }
 
-
 /* NO-SPAN TAGGED TITLES and YELLOW STRIPES FOR NO-SPAN TAGGED TITLES */
 .path-blog h1.page-title,
 .path-vesti h1.page-title,
@@ -27,25 +26,32 @@
   content: url("../img/yellow-stripes-78.png");
   position: absolute;
   z-index: -1;
+  top: 6px;
+  left: -31px;
+}
+
+.path-tim .page-title:before {
   bottom: -16px;
-  left: -30px;
-  color: red;
+  left: -34px;
 }
 
 .path-blog #block-barbell-content,
 .path-vesti #block-barbell-content {
-  margin: 100px;
+  margin: 100px 0 150px;
 }
+
 @media only screen and (min-width: 320px) and (max-width: 700px) {
   .path-blog #block-barbell-content,
   .path-vesti #block-barbell-content {
-    margin: 20px;
+    margin: 7px;
   }
 }
+
 .path-blog div .layout-container main .layout-content,
 .path-vesti div .layout-container main .layout-content {
   margin: 0 7%;
 }
+
 @media only screen and (min-width: 320px) and (max-width: 700px) {
   .path-blog div .layout-container main .layout-content,
   .path-vesti div .layout-container main .layout-content {
@@ -53,36 +59,97 @@
   }
 }
 
-.path-blog .image-style-medium,
-.path-vesti .image-style-medium {
-  padding-top: 100%!important;
-}
-
-.path-blog div .layout-container main .layout-content div #block-barbell-content div div .view-content,
-.path-vesti div .layout-container main .layout-content div #block-barbell-content div div .view-content {
+.path-blog
+  div
+  .layout-container
+  main
+  .layout-content
+  div
+  #block-barbell-content
+  div
+  div
+  .view-content,
+.path-vesti
+  div
+  .layout-container
+  main
+  .layout-content
+  div
+  #block-barbell-content
+  div
+  div
+  .view-content {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-gap: 20px;
   justify-content: space-between;
 }
-@media only screen and (min-width: 320px) and (max-width: 1100px) {
-  .path-blog div .layout-container main .layout-content div #block-barbell-content div div .view-content,
-  .path-vesti div .layout-container main .layout-content div #block-barbell-content div div .view-content {
+
+@media only screen and (max-width: 1100px) {
+  .path-blog
+    div
+    .layout-container
+    main
+    .layout-content
+    div
+    #block-barbell-content
+    div
+    div
+    .view-content,
+  .path-vesti
+    div
+    .layout-container
+    main
+    .layout-content
+    div
+    #block-barbell-content
+    div
+    div
+    .view-content {
     grid-template-columns: repeat(3, 1fr);
+    margin: 0 2vw 7em;
+  }
+
+  .path-blog #block-barbell-content,
+  .path-vesti #block-barbell-content {
+    margin: 0;
+  }
+
+  .path-blog .article-thumb .article-info-wrapper .article-title span,
+  .path-vesti .article-thumb .article-info-wrapper .article-title span {
+    font-size: 1.7rem;
+    line-height: 24px;
   }
 }
 
-@media only screen and (min-width: 320px) and (max-width: 900px) {
-  .path-blog div .layout-container main .layout-content div #block-barbell-content div div .view-content,
-  .path-vesti div .layout-container main .layout-content div #block-barbell-content div div .view-content {
+@media only screen and (max-width: 576px) {
+  .path-blog
+    div
+    .layout-container
+    main
+    .layout-content
+    div
+    #block-barbell-content
+    div
+    div
+    .view-content,
+  .path-vesti
+    div
+    .layout-container
+    main
+    .layout-content
+    div
+    #block-barbell-content
+    div
+    div
+    .view-content {
     grid-template-columns: repeat(2, 1fr);
+    margin: 0 2px;
   }
-}
 
-@media only screen and (min-width: 320px) and (max-width: 700px) {
-  .path-blog div .layout-container main .layout-content div #block-barbell-content div div .view-content,
-  .path-vesti div .layout-container main .layout-content div #block-barbell-content div div .view-content {
-    grid-template-columns: 1fr;
+  .path-blog #block-barbell-content,
+  .path-vesti #block-barbell-content {
+    margin-bottom: 100px !important;
   }
 }
 
@@ -94,51 +161,59 @@
 .path-blog .views-row,
 .path-vesti .views-row {
   border: 2px solid var(--yellow);
+  position: relative;
+  padding-bottom: 40px;
 }
-
-
 
 .article-thumb a {
   text-decoration: none;
   color: black;
   font-family: "Brandon Grotesque Medium";
 }
-.path-blog .article-thumb a:hover .article-info-wrapper .article-title,
-.path-vesti .article-thumb a:hover .article-info-wrapper .article-title {
+.path-blog .views-row:hover .article-title span,
+.path-vesti .views-row:hover .article-title span {
   color: whitesmoke;
 }
 
 /* Article title */
 .path-blog .article-thumb .article-info-wrapper .article-title span,
 .path-vesti .article-thumb .article-info-wrapper .article-title span {
-  font-size: 4.65vmin;
+  font-size: 30px;
+  line-height: 30px;
+  display: inline-block;
+  width: 100%;
 }
-@media only screen and (min-width: 320px) and (max-width: 1500px) {
-  .path-blog .article-thumb .article-info-wrapper .article-title span,
-  .path-vesti .article-thumb .article-info-wrapper .article-title span {
-    font-size: 4vmin;
-  }
-} 
-@media only screen and (min-width: 320px) and (max-width: 1000px) {
-  .path-blog .article-thumb .article-info-wrapper .article-title span,
-  .path-vesti .article-thumb .article-info-wrapper .article-title span {
-    font-size: 3vmin;
-  }
-} 
 
-@media only screen and (min-width: 320px) and (max-width: 700px) {
+@media only screen and (min-width: 1000px) and (max-width: 1500px) {
   .path-blog .article-thumb .article-info-wrapper .article-title span,
   .path-vesti .article-thumb .article-info-wrapper .article-title span {
-    font-size: 6vmin;
+    font-size: 28px;
   }
 }
 
-.article-image {
-  background: dimgray;
+@media only screen and (min-width: 768px) and (max-width: 1000px) {
+  .path-blog .article-thumb .article-info-wrapper .article-title span,
+  .path-vesti .article-thumb .article-info-wrapper .article-title span {
+    font-size: 26px;
+  }
+}
+
+@media only screen and (min-width: 320px) and (max-width: 768px) {
+  .path-blog .article-thumb .article-info-wrapper .article-title span,
+  .path-vesti .article-thumb .article-info-wrapper .article-title span {
+    font-size: 19px;
+    line-height: 24px;
+  }
+
+  .article-info-wrapper .article-date div time {
+    font-size: 16px;
+  }
 }
 
 .article-image div img {
   width: 100%;
+  display: inline-block;
+  height: auto;
 }
 
 .article-info-wrapper {
@@ -147,5 +222,115 @@
 
 .article-info-wrapper .article-date div time {
   color: var(--gray);
-  font-size: 30px;
+  font-size: 24px;
+  position: absolute;
+  bottom: 8px;
+  left: 50%;
+  transform: translate(-50%);
+}
+
+@media only screen and (max-width: 1200px) {
+  .article-info-wrapper .article-date div time {
+    font-size: 23px;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  .article-info-wrapper .article-date div time {
+    font-size: 21px;
+  }
+}
+
+.pager__items {
+  padding-left: 0;
+  position: relative;
+  margin: 35px 0;
+}
+
+.pager__items .pager__item--next,
+.pager__items .pager__item--previous {
+  text-transform: uppercase;
+}
+
+.pager__items .pager__item--previous {
+  position: absolute;
+  top: -30px;
+  left: 0;
+}
+
+.pager__items .pager__item--next {
+  position: absolute;
+  top: -23px;
+  right: 0;
+}
+.pager__items .is-active {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  font-size: 18px;
+}
+
+.pager__items a {
+  text-decoration: none;
+  color: black;
+}
+
+.next_arrow,
+.previous_arrow {
+  font-size: 45px;
+  position: relative;
+  top: 5px;
+}
+
+.next_txt,
+.previous_txt {
+  font-size: 16px;
+}
+
+@media only screen and (max-width: 1100px) {
+  .next_txt,
+  .previous_txt {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 577px) and (max-width: 1100px) {
+  .pager__items {
+    top: -80px;
+  }
+}
+
+/* ///////////////// */
+
+@media only screen and (min-width: 768px) and (max-width: 992px) {
+  .path-vesti .page-title,
+  .path-blog .page-title {
+    /* margin: 0; */
+    font-size: 45px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .path-vesti .page-title,
+  .path-blog .page-title {
+    /* margin: 0; */
+    font-size: 32px;
+  }
+
+  .path-tim .page-title:before,
+  .path-vesti .page-title:before,
+  .path-blog .page-title:before {
+    content: url(../img/page-title-bcg-sm.png) !important;
+    top: 2px !important;
+    left: -18px !important;
+  }
+
+  .path-tim .page-title:before {
+    top: -1px !important;
+    left: -24px !important;
+  }
+
+  .path-tim .page-title {
+    font-size: 31px;
+  }
 }

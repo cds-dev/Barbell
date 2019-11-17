@@ -5,6 +5,10 @@
 /web/modules/contrib/
 /web/themes/contrib/
 /web/profiles/contrib/
+/web/libraries/
+/modules/
+/1modules/
+
 #/web/libraries/
 /modules/
 /1modules/
@@ -32,3 +36,12 @@
 /web/sites/default/1local.services.yml
 /web/themes/custom/barbell/css/Henrik/
 /web/themes/custom/barbell/css/__MACOSX/
+
+# Kata
+.vscode/
+web/themes/custom/barbell/img/aics.png
+web/themes/custom/barbell/img/barbell logo.psd
+web/themes/custom/barbell/img/se.png
+web/themes/custom/barbell/img/fe.png
+config/
+files.zip

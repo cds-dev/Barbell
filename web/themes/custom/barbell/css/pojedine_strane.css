@@ -1,0 +1,180 @@
+.page-node-type-article article img {
+  width: 100%;
+  height: auto;
+  margin: 1em 0;
+}
+
+@media only screen and (min-width: 1200px) {
+  .page-node-type-article article img {
+    margin: 1em 0 4em;
+  }
+}
+
+.page-node-type-article #block-zakazitetrening {
+  padding-top: 5em;
+}
+
+.align-left {
+  width: 100%;
+  height: auto;
+  padding-bottom: 1.5em;
+}
+
+blockquote p {
+  text-transform: uppercase;
+  font-family: "Henry", sans-serif !important;
+  text-align: center !important;
+  margin: 80px 0 0 !important;
+}
+
+blockquote p:before,
+blockquote p:after {
+  content: '"';
+}
+
+@media only screen and (max-width: 360px) {
+  .page-node-type-article #block-zakazitetrening p {
+    margin: 2em 0;
+  }
+
+  .page-node-type-program .field--name-field-link-button div,
+  .page-node-type-tim .field--name-field-link-button div,
+  .page-node-type-article #block-zakazitetrening p {
+    font-size: 16px;
+    text-align: center;
+    padding: 1.2em 1em;
+  }
+
+  .field--name-field-link-button {
+    padding: 0;
+  }
+
+  /* .page-node-type-tim .field--name-field-link-button div {
+    padding: 0;
+    margin: 1em 2em;
+  } */
+}
+
+@media only screen and (max-width: 480px) {
+  blockquote p {
+    font-size: 26px !important;
+  }
+}
+
+@media only screen and (min-width: 480px) {
+  blockquote p {
+    font-size: 28px !important;
+  }
+}
+
+@media only screen and (min-width: 576px) {
+  blockquote p {
+    font-size: 36px !important;
+  }
+}
+/* .page-node-type-tim #block-barbell-content,
+.page-node-type-program #block-barbell-content,
+.page-node-type-article #block-barbell-content,
+.page-node-type-tim p {
+  padding: 0 1em;
+} */
+
+.page-node-type-article p {
+  margin: 0;
+}
+
+.page-node-type-article .node__content .field__item,
+.page-node-type-tim .field__item,
+.page-node-type-program .field__item {
+  padding: 0 2em;
+}
+
+@media only screen and (max-width: 768px) {
+  .page-node-type-article .node__content .field__item,
+  .page-node-type-tim .field__item,
+  .page-node-type-program .field__item {
+    padding: 0;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .page-node-type-tim #block-barbell-content,
+  .page-node-type-program #block-barbell-content,
+  .page-node-type-article #block-barbell-content,
+  .page-node-type-tim p {
+    margin: 0;
+  }
+
+  .align-rigth {
+    width: 50%;
+    float: right;
+    position: relative;
+    bottom: -10px;
+    padding: 0;
+  }
+
+  .align-left {
+    width: 50%;
+    float: left;
+    position: relative;
+    bottom: -10px;
+    padding: 0;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  .page-node-type-tim #block-barbell-content,
+  .page-node-type-program #block-barbell-content,
+  .page-node-type-article #block-barbell-content {
+    padding: 1em;
+  }
+
+  .page-node-type-tim #block-barbell-content p,
+  .page-node-type-program #block-barbell-content p,
+  .page-node-type-article #block-barbell-content div {
+    margin: 0;
+    /* padding: 1em; */
+  }
+  .page-node-type-article #block-barbell-content p {
+    padding: 0;
+    margin: 0;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .page-node-type-tim #block-barbell-content,
+  .page-node-type-program #block-barbell-content,
+  .page-node-type-article #block-barbell-content {
+    padding: 0 10em;
+  }
+
+  .page-node-type-tim #block-barbell-content p {
+    font-size: 38px;
+    /* margin: 1.5em 220px 2em; */
+    line-height: 48px;
+  }
+
+  .page-node-type-tim #block-barbell-content blockquote p {
+    font-size: 48px !important;
+    line-height: 70px;
+  }
+}
+
+@media only screen and (min-width: 1600px) {
+  .page-node-type-tim #block-barbell-content,
+  .page-node-type-program #block-barbell-content,
+  .page-node-type-article #block-barbell-content {
+    padding: 0 15em;
+  }
+
+  .page-node-type-tim #block-barbell-content blockquote p {
+    font-size: 74px !important;
+    margin: 80px 0 0 !important;
+    line-height: 70px !important;
+  }
+
+  .page-node-type-article #block-barbell-content p {
+    /* width: 1500px; */
+    margin: -1em auto 2em;
+  }
+}

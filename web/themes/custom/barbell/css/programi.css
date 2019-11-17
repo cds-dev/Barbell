@@ -1,92 +1,239 @@
-:root {
-    --each: 400px; /* širina celog jednog program boxa */
-    --oneHalf: 200px; /* širina slike / texta unutar jednog boxa */
-    --text: 350px;
+/* Basic layout of one box */
+
+.path-programi .program-link {
+  display: grid;
+  grid-template-columns: repeat(2, 50%);
+  height: 100%;
+  width: 95vw;
+  margin: 3em auto;
+  color: black;
+  text-decoration: none;
+}
+
+/* OKRETANJE PARNIH PROGRAMA NA DRUGU STRANU */
+.path-programi
+  .view-content
+  .views-row:nth-child(even)
+  .program-thumb
+  .program-link
+  .program-image {
+  grid-column: 2/3;
+  grid-row: 1/2;
+  
+}
+
+.path-programi
+  .view-content
+  .views-row
+  .program-thumb
+  .program-link
+  .program-image {
+background-size: cover;
+  }
+
+/* OUTER INFO WRAPPER */
+.path-programi .views-row .program-info-wrapper {
+  width: 160%;
+  z-index: 5;
+  background: var(--yellow);
+  padding: 3px;
+}
+
+.path-programi .views-row:nth-child(odd) .program-info-wrapper {
+  position: relative;
+  left: -60%;
+  clip-path: polygon(37% 0, 100% 0, 100% 100%, 0 100%);
+  text-align: right;
+}
+
+.path-programi .views-row:nth-child(even) .program-info-wrapper {
+  clip-path: polygon(0 0, 63% 0, 100% 102%, 0 100%);
+}
+
+.path-programi .program-link:hover .program-info-wrapper,
+.path-programi .program-link:hover .program-info-wrapper-mini {
+  background: var(--black);
+}
+
+.path-programi .views-row:hover .program-description,
+.path-programi .views-row:hover .program-title {
+  color: black;
+}
+.path-programi .program-link:hover .program-description,
+.path-programi .program-link:hover .program-title {
+  color: whitesmoke;
+}
+
+/* INNER INFO WRAPPER */
+.path-programi .views-row .program-info-wrapper-mini {
+  background: whitesmoke;
+  padding: 0.3em;
+
+  font-family: "Brandon Grotesque Medium";
+}
+
+.path-programi .views-row .program-info-wrapper-mini {
+  height: 100%;
+}
+
+@media only screen and (min-width: 624px) and (max-width: 848px) {
+  .path-programi .view-content .program-thumb {
+    height: 275px;
+    margin-bottom: 7em !important;
+  }
+}
+
+@media only screen and (min-width: 430px) and (max-width: 624px) {
+  .path-programi .view-content .program-thumb {
+    height: 230px;
+    margin-bottom: 7em !important;
+  }
+}
+
+.path-programi .views-row:nth-child(odd) .program-info-wrapper-mini {
+  clip-path: polygon(37.5% 0, 100% 0, 100% 100%, 1.3% 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.path-programi .views-row:nth-child(even) .program-info-wrapper-mini {
+  clip-path: polygon(0 0, 62.5% 0, 98.7% 101%, 0 100%);
+}
+
+.path-programi .program-title {
+  width: 65%;
+}
+
+.path-programi .program-title span {
+  font-family: "Henry";
+  font-size: 4vw;
+  text-transform: uppercase;
+  display: inline-block;
+}
+
+.path-programi .program-description {
+  font-size: 4vw;
+}
+
+.path-programi .program-description div {
+  align-self: end;
+}
+
+.path-programi .views-row:nth-child(odd) .program-description div:before {
+  margin: 1em 1em 1em auto;
+}
+
+.path-programi .views-row:nth-child(even) .program-description div:before {
+  margin: 1em auto 1em 1em;
+}
+
+.path-programi .program-description {
+  font-size: 1.2rem;
+  width: 80%;
+}
+
+.path-programi .views-row:nth-child(odd) .program-description {
+  display: flex;
+  flex-direction: column;
+  align-self: flex-end;
+}
+
+/* MEDIA QUERIES */
+@media only screen and (min-width: 27em) {
+  .path-programi .program-link {
+    width: 25em;
+  }
+
+  .path-programi .program-title {
+    width: 69%;
   }
 
   .path-programi .program-title span {
-    font-family: "Henry";
-    font-size: 26px;
-    text-transform: uppercase;
+    font-size: 1.5em;
   }
 
+  .path-programi .program-description {
+    font-size: 1.2rem;
+  }
+
+  .path-programi .views-row .program-info-wrapper-mini {
+    padding: 1em 0.7em;
+  }
+
+  .path-programi .views-row:nth-child(odd) .program-info-wrapper-mini {
+    clip-path: polygon(37.5% 0, 100% 0, 100% 100%, 1% 100%);
+  }
+}
+
+@media only screen and (min-width: 39em) {
+  /*608*/
   .path-programi .program-link {
-    color: black;
-    text-decoration: none;
+    width: 37.5em;
   }
 
-  /* spoljni grid koji drži po dva programa u jednom redu */
+  .path-programi .program-title span {
+    font-size: 2.375em;
+  }
+
+  .path-programi .program-description {
+    font-size: 1.6rem;
+  }
+}
+
+@media only screen and (min-width: 53em) {
+  /*832*/
+  .path-programi .program-link {
+    width: 25em;
+  }
+
   .path-programi .view-content {
-      display: grid;
-      grid-template-columns: var(--each) var(--each);
-      justify-content: space-around;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: space-around;
+    margin-bottom: 190px;
   }
 
-  .path-programi .view-content .views-row {
-      height: 233px;
-      overflow: hidden;
+  .path-programi .views-row {
+    height: 13em;
+    margin-bottom: 3em;
   }
 
-  /* div pojedinog programa */
-  .path-programi .view-content .views-row .program-thumb {
-      margin: 0;
-      height: 100%;
-  }
-
-  .path-programi .view-content .views-row .program-thumb .program-link {
-      display: grid;
-      grid-template-columns: var(--oneHalf) var(--oneHalf);
-      height: 100%;
-  }
-  /* .path-programi .view-content .views-row:nth-child(odd) .program-thumb .program-link .program-info-wrapper {
-    position: absolute;
-    border: 3px solid var(--yellow);
+  .path-programi .program-thumb,
+  .path-programi .program-thumb .program-info-wrapper-mini {
     height: 100%;
-  } */
-
-  /* LEVA SLIKA */ 
-  .path-programi .view-content .views-row:nth-child(odd) .program-thumb .program-link .program-image {
-    clip-path: polygon(0 0, 100% 0%, 15% 100%, 0% 100%);
-    background: var(--yellow);
-    
-  }
-  .path-programi .view-content .views-row:nth-child(odd) .program-thumb .program-link .program-image img {
-    overflow: hidden;
   }
 
-/* LEVI TEXT */
-.path-programi .view-content .views-row:nth-child(odd) .program-thumb .program-link .program-title {
-    position: relative;
-    right: 10px;
-    padding: 10px;
+  .path-programi .program-title span,
+  .path-programi .program-description {
+    font-size: 1.2rem;
+  }
 }
 
-/* DESNI TEXT */
-.path-programi .view-content .views-row:nth-child(even) .program-thumb .program-link .program-title {
-    /* position: relative;
-    right: 10px; */
-    padding: 10px;
+@media only screen and (min-width: 76em) {
+  /*1216*/
+  .path-programi .program-link {
+    width: 37.5em;
+  }
+
+  .path-programi .program-title span {
+    font-size: 2.375em;
+  }
+
+  .path-programi .program-description {
+    font-size: 1.6rem;
+  }
+
+  .path-programi .views-row {
+    height: 20em;
+    margin-bottom: 5em;
+  }
+
+  .path-programi .views-row:nth-child(odd) .program-info-wrapper-mini {
+    clip-path: polygon(37.3% 0, 100% 0, 100% 100%, 0.5% 100%);
+  }
+
+  .path-programi .views-row:nth-child(even) .program-info-wrapper-mini {
+    clip-path: polygon(0 0, 62.7% 0, 99% 101%, 0 100%);
+  }
 }
-
-  /* OKRETANJE PARNIH PROGRAMA NA DRUGU STRANU */
-  .path-programi .view-content .views-row:nth-child(even) .program-thumb .program-link .program-image {
-      background: var(--yellow);
-      grid-column: 2/3;
-      clip-path: polygon(0 0, 100% 0%, 100% 100%, 85% 100%);
-  }
-
-  .path-programi .view-content .views-row:nth-child(even) .program-thumb .program-link .program-info-wrapper {
-      grid-column: 1/2;
-      grid-row: 1/2;    
-  }
-
-  .path-programi .view-content .views-row {
-    border: 3px solid transparent;
-    color: black;
-  }
-
-  .path-programi .view-content .views-row:hover {
-    backgrond: black;
-    border: 3px solid transparent!important;
-    /*background: transparent;*/
-  }

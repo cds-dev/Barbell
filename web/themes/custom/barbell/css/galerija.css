@@ -1,0 +1,35 @@
+.page-node-type-galerija #block-barbell-content {
+  width: 100%;
+  margin-bottom: 150px;
+}
+
+[class*="block-column-"],
+.item-list > [class*="block-column-"] {
+  column-gap: 0;
+}
+
+[class*="block-column-"] > .grid,
+.item-list > [class*="block-column-"] > .grid {
+  margin-bottom: -8px !important;
+}
+
+.blazy img {
+  width: 100%;
+  height: auto;
+  background: lightblue;
+}
+
+.page-node-type-galerija .blazy li,
+.page-node-type-galerija .blazy div,
+.page-node-type-galerija .blazy a {
+  display: inline-block !important;
+  width: 100% !important;
+}
+
+.blazy a:hover {
+  cursor: pointer;
+}
+
+/* .slick-lightbox-close:before {
+  font-size: 50px;
+}
